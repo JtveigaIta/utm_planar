@@ -1,0 +1,81 @@
+@startuml
+!theme toy
+
+title Diagrama de Blocos Simplificado - Simulador UTM Futuro
+
+package "Módulo de Simulação Central" {
+  [Simulação Core] as SIM_CORE
+  [Cenário e Ambiente 4D] as AMB_4D
+  [Parâmetros e Configuração] as CONFIG
+  [Injetor de Falhas] as INJ_FALHAS
+  [Módulo de Performance] as MOD_PERF
+}
+
+package "Módulo de Gerenciamento UTM" {
+  [Provedor UTM (USS)] as PROV_UTM
+  [Autoridade Aeronáutica] as AUT_AERO
+  [DSS (Discovery & Sync)] as DSS
+  [Agente de Desconflito] as AG_DESC
+  [Modelo de Fiscalização] as MOD_FISC
+}
+
+package "Módulo de Entidades e Voo" {
+  [Drone / Aeronave (Modelo Físico)] as DRONE_MODEL
+  [Operador / Cliente UTM] as OPERADOR
+  [OIR e Plano de Voo (4D)] as OIR_PV
+  [Protocolo de Comunicação] as PROTO_COM
+}
+
+package "Módulo de Análise e Relatórios" {
+  [Monitoramento e Telemetria] as MONITOR
+  [Relatório de Simulação] as RELATORIO
+  [Auditoria de Provedor] as AUDITORIA
+  [Métricas de Desempenho] as METRICAS
+  [Modelos Econômicos e Tarifação] as MOD_ECON
+}
+
+package "Módulo de Visualização e Interação" {
+  [Mapa Interativo (2D/3D)] as MAPA_INT
+  [Dashboard Operacional] as DASHBOARD
+  [Exportador de Dados] as EXPORT
+  [Usuário / Perfil de Acesso] as USER_ACCESS
+}
+
+' Relações de Dependência e Fluxo de Dados
+
+' Simulação Central
+SIM_CORE --> AMB_4D : Usa
+SIM_CORE --> CONFIG : Configura
+SIM_CORE --> DRONE_MODEL : Controla
+SIM_CORE --> PROV_UTM : Interage
+
+' Gerenciamento UTM
+PROV_UTM --> OIR_PV : Processa
+PROV_UTM --> DSS : Sincroniza
+PROV_UTM --> AG_DESC : Aciona
+PROV_UTM --> AUT_AERO : Reporta
+
+' Entidades e Voo
+OPERADOR --> OIR_PV : Submete
+DRONE_MODEL --> MONITOR : Envia Telemetria
+DRONE_MODEL --> PROTO_COM : Comunica
+
+' Análise e Relatórios
+MONITOR --> RELATORIO : Gera Dados
+MONITOR --> METRICAS : Calcula
+RELATORIO --> DASHBOARD : Exibe
+AUDITORIA --> PROV_UTM : Avalia Conformidade
+MOD_ECON --> RELATORIO : Inclui Dados
+
+' Visualização
+MAPA_INT --> AMB_4D : Exibe Cenário
+DASHBOARD --> MONITOR : Exibe KPIs
+USER_ACCESS --> CONFIG : Define Parâmetros
+EXPORT --> RELATORIO : Exporta
+
+' Outras Relações
+INJ_FALHAS --> DRONE_MODEL : Simula Falhas
+INJ_FALHAS --> PROTO_COM : Simula Delays
+MOD_PERF --> SIM_CORE : Avalia Desempenho
+
+@enduml

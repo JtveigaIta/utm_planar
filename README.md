@@ -1,3 +1,11 @@
+**🛰️ Desenvolvido para pesquisa, inovação e segurança na aviação não tripulada do Brasil.**  
+
+# 📚 Créditos e Licenciamento
+
+**Autor:** Jackson Tavares Veiga
+**Instituição:** ITA / SAC / Projeto BR-UTM
+**Ano:** 2025
+
 # 🛩️ **Simulador PlanAr UTM**
 
 O **PlanAr UTM** é um simulador de gerenciamento de tráfego aéreo não tripulado, inspirado na lógica do **UTM (Unmanned Traffic Management)** brasileiro. Ele nasce dentro do contexto do **Projeto PlaNAR – Planador Autônomo para Ressuprimento Logístico**, com integração de diferentes módulos de inteligência, replanejamento e falhas.
@@ -113,3 +121,54 @@ O sistema oferecerá:
 ---
 
 **🛰️ Desenvolvido para pesquisa, inovação e segurança na aviação não tripulada do Brasil.**  
+
+# 📚 Créditos e Licenciamento
+
+**Autor:** Jackson Tavares Veiga
+**Instituição:** ITA / SAC / Projeto BR-UTM
+**Ano:** 2025
+
+O conteúdo deste repositório é de uso **acadêmico e educacional**, protegido por registro de propriedade intelectual.
+Citações devem incluir o nome do autor e o título do trabalho.
+
+> “Mission Replanning and Control Framework (MRCF)”
+> *© 2025 Jackson Tavares Veiga. Todos os direitos reservados.*
+
+---
+## 📚 Referências
+
+## 📖 Como Citar Este Trabalho
+
+Se você utilizar ou referenciar este projeto em pesquisas, relatórios ou publicações acadêmicas, por favor cite da seguinte forma:
+
+> **Jackson T. Veiga.** *Mission Replanning and Control Framework (MRCF): A Strategic Architecture for BVLOS Operations in UTM Environments (in proceeds).*  
+> Aeronautics Institute of Technology (ITA), Department of Science and Space Technology (CTE), São José dos Campos, SP, Brazil, 2025.  
+> 📧 jackson.veiga.101422@ga.ita.br
+
+Ou, em formato **BibTeX**:
+
+@inproceedings{veiga2025mrcf,
+  author    = {Jackson T. Veiga},
+  title     = {Mission Replanning and Control Framework (MRCF): A Strategic Architecture for BVLOS Operations in UTM Environments},
+  booktitle = {Proceedings of the Aeronautics Institute of Technology (ITA), Department of Science and Space Technology (CTE)},
+  year      = {2025},
+  address   = {São José dos Campos, SP, Brazil},
+  note      = {(in proceeds)},
+  email     = {jackson.veiga.101422@ga.ita.br}
+}
+
+[2] J. T. Veiga, M. A. Pessoa, F. Junqueira, P. E. Miyagi, and D. J. dos Santos Filho,  
+“A systematic modelling procedure to design agent-oriented control to coalition of capabilities—in the context of I4.0 as virtual assets (AAS),” *Computers*, vol. 10, no. 12, p. 161, 2021.  
+
+[3] J. T. Veiga, “Proposta de um método para o controle de coalizão de recursos virtuais baseado em multi-agentes no contexto I4.0,” *Ph.D. dissertation*, Universidade de São Paulo, 2022.  
+
+[4] J. T. Veiga, “An Open Framework for UAS Mission Replanning: From Intellectual Property to Collaborative Research,” in *Proceedings of the [Conference AIAA]*, 2025. (Versão Completa em Revisão)  
+
+[5] F. L. S. D. Santos, “pyAutonomousAgent: An academic tool for modeling autonomous agent behaviors using behavior trees,” *JATM*, 2023. [Online]. Available: [https://www.scielo.br/j/jatm/a/fqNpVmY4RhchPsGQGdjpXVd/](https://www.scielo.br/j/jatm/a/fqNpVmY4RhchPsGQGdjpXVd/)
+
+---
+
+# 🛡️ Direitos Autorais e Propriedade Intelectual (Rodapé)
+
+- **Propriedade Intelectual:** Arquitetura de Controle Multi-Agente para Replanejamento de Missões de VANTs  
+- **Autor Registrado:** Jackson Tavares Veiga  

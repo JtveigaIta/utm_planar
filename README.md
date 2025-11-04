@@ -1,0 +1,115 @@
+# 🛩️ **Simulador PlanAr UTM**
+
+O **PlanAr UTM** é um simulador de gerenciamento de tráfego aéreo não tripulado, inspirado na lógica do **UTM (Unmanned Traffic Management)** brasileiro. Ele nasce dentro do contexto do **Projeto PlaNAR – Planador Autônomo para Ressuprimento Logístico**, com integração de diferentes módulos de inteligência, replanejamento e falhas.
+
+Seu propósito é oferecer uma arquitetura modular e extensível para estudos, testes operacionais e pesquisas acadêmicas relacionadas à aviação do futuro, com suporte a simulação de cenários complexos e interação entre provedores UTM, operadores, drones e autoridades.
+
+---
+
+## 🎯 **Objetivos Principais**
+
+- Simular o ecossistema operacional do UTM brasileiro de forma fidedigna.
+- Avaliar conflitos, desconflitos e separação entre aeronaves não tripuladas.
+- Reproduzir a comunicação entre provedores UTM, DECEA/ANAC e operadores.
+- Incluir falhas operacionais, replanejamento dinâmico e resposta automatizada.
+- Gerar registros, relatórios de não conformidade e dados para aprendizado de máquina.
+- Servir como ambiente modular (um “lego” de UTM), para colaboração acadêmica.
+
+---
+
+## 🧱 **Arquitetura de Módulos**
+
+O simulador é composto por três principais sistemas integrados:
+
+| Sigla | Nome | Função |
+|-------|------|--------|
+| **MRCF** | Mission Replanning and Control Framework | Replanejamento tático de missões, análise de rotas, resposta a falhas e reconfiguração dinâmica de aeronaves. |
+| **MIRF** | Módulo de Injeção e Recuperação de Falhas | Emula falhas em drones, sensores, comunicação, provedores e avalia resiliência do sistema. |
+| **PlanAr UTM** | Núcleo do simulador | Infraestrutura que integra provedores UTM, operadores, OIRs, drones, conflitos, registros e relatórios. |
+
+---
+
+## 🗂️ **Blocos Funcionais do Simulador**
+
+Os cinco grandes blocos principais são:
+
+1. **Cenários e Espaço Aéreo**
+   - Modelagem 4D do espaço aéreo.
+   - Zonas de operação, volumes de exclusão, áreas urbanas/rurais, meteorologia.
+   - Definição de rotas, reservas de espaço (como SARPAS) e condições iniciais.
+
+2. **Provedor UTM / Autorização / OIR**
+   - Processamento de solicitações de voo.
+   - Autorização, comunicação com DECEA, aplicação de regras e limites operacionais.
+   - Monitoramento de provedores USS e registros de não conformidade.
+
+3. **Operador / Drone / Operação**
+   - Modelos de drones (asa fixa, rotativa, tamanhos, pesos).
+   - Envio de planos de voo, telemetria, identificação remota, controle e autonomia.
+
+4. **Conflito / Separação / Desconflito**
+   - Identificação de conflitos horizontais e verticais.
+   - Ajuste de rotas, altitudes, replanejamento automático.
+   - Geração de dados para IA e análises de segurança.
+
+5. **Registro / Relatórios / Dashboards**
+   - Registro de eventos, falhas, tempos de resposta e não conformidades.
+   - Dashboards 2D/3D, mapas em tempo real, simulações visuais e relatórios automáticos.
+
+---
+
+## 🛠️ **Objetos Principais do Sistema**
+
+| Objeto | Responsabilidade |
+|--------|-------------------|
+| **Simulação** | Controle global do tempo, ciclo de execução, logs, modo real/acelerado. |
+| **Cenário** | Zonas, volumes 3D, condições iniciais, parâmetros de voo e ambiente. |
+| **ZonaOperacional / Volume3D** | Representação de áreas controladas, restritas ou temporárias. |
+| **Drone** | Estado, modelo físico, sensores, bateria, telemetria e falhas. |
+| **Operador** | Submissão de planos de voo, monitoramento e decisões humanas. |
+| **ProvedorUTM** | Autoriza voos, monitora restrições, comunica-se com o DECEA e outros provedores. |
+| **OIR** | Órgão de Informações de Risco: envia dados de incidentes, falhas ou emergências. |
+| **Conflito** | Detecção de violação de separação, classificação e armazenamento. |
+| **MRCF** | Altera trajetórias, realiza replanejamento tático e coordena resposta a eventos. |
+| **MIRF** | Injeta falhas e avalia a resiliência do sistema ao erro. |
+| **Registro** | Banco de dados de logs, eventos, autorizações e não conformidades. |
+
+---
+
+## 🚀 **Possibilidades de Expansão (Lego UTM)**
+
+O simulador foi projetado para suportar futuras expansões como:
+
+- **Tarifação de voo e penalidades**
+- **Modelos de saturação e equidade de acesso ao espaço aéreo**
+- **Modelos econômicos, sociais e indicadores de desempenho**
+- **Integração com sistemas ADS-B / ABSL adaptados a drones**
+- **Modelo de comunicação remota, rádio e identificação digital**
+- **Cenários meteorológicos, terrenos 3D e espaço-tempo 4D**
+- **Representação internacional e integração de múltiplos países**
+
+---
+
+## 📊 **Interfaces e Visualizações**
+
+O sistema oferecerá:
+
+- **Dashboards operacionais**
+- **Mapas dinâmicos 2D/3D**
+- **Visualização de drones em tempo real**
+- **Alertas de conflito e falhas**
+- **Relatórios automáticos de não conformidade (PDF/Excel)**
+- **Simulações com time-lapse ou em tempo real**
+
+---
+
+## ✅ **Próximos Passos**
+
+- [ ] Gerar diagramas UML dos blocos principais  
+- [ ] Criar repositório com estrutura do simulador  
+- [ ] Definir modelos de dados dos principais objetos  
+- [ ] Implementar comunicação entre módulos MRCF ↔ Provedor ↔ Drone  
+
+---
+
+**🛰️ Desenvolvido para pesquisa, inovação e segurança na aviação não tripulada do Brasil.**  
